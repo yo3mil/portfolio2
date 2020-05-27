@@ -5,7 +5,7 @@
     
     <router-link tag="div" to="/" class="app__title">
       <h1>Emil</h1>
-      <h1>Wójcik</h1>
+      <h1>WOjcik</h1>
     </router-link>
   </div>
 </template>
