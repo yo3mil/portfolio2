@@ -1,6 +1,6 @@
 <template>
   <div>
-    About me page
+      Dev section
   </div>
 </template>
 
@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
