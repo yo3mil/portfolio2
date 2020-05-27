@@ -1,9 +1,9 @@
 module.exports = {
-    css: {
-      loaderOptions: {
-        sass: {
-          prependData: `@import "@/styles/_base.scss";`
-        }
+  css: {
+    loaderOptions: {
+      sass: {
+        prependData: `@import "@/styles/_main.scss";`
       }
     }
-  };
+  }
+};

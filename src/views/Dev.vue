@@ -1,6 +1,6 @@
 <template>
-  <div>
-      Dev section
+  <div class="dev grid_2x3">
+      
   </div>
 </template>
 

@@ -1,0 +1,17 @@
+.television {
+    grid-row: 1 / 4;
+    grid-column: 2 ;
+    border: 2px solid $color-black ;
+    margin: 30px 0;
+    background-color: $color-gray-light;
+    
+    position: relative;
+    &__antena {
+        height: 20rem;
+        width: 20rem;
+        border: 3px solid black;
+        grid-column: 4;
+        
+        position: absolute;
+    }
+}
