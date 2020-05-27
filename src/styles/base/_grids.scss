@@ -1,29 +1,29 @@
 .grid_main {
     display: grid;
-    grid-template-rows: 8vh 1fr 8vh;
+    grid-template-rows: 11vh 1fr 11vh;
     grid-template-columns: 
                 [full-start] 
-                11vw 
+                14vw 
                 [center-start] 
                 1fr
                 [center-end] 
-                11vw 
+                14vw 
                 [full-end]; 
 } 
 .grid_12x12 {
     display: grid;
-    grid-template-rows: repeat(12, 7vh);
-    grid-template-columns: repeat(12, 6.5vw);
+    grid-template-rows: repeat(12, 6.5vh);
+    grid-template-columns: repeat(12, 6vw);
 }
 .grid_2x3 {
     display: grid;
-    grid-template-columns: 28% 1fr;
+    grid-template-columns: 33% 1fr;
     grid-template-rows: repeat(3, 1fr);
 }
 .grid_10x10 {
     display: grid;
-    grid-template-rows: repeat(10, 10%);
-    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 4vw);
 }
 //    grid-template-columns: 
 //    [full-start] 
