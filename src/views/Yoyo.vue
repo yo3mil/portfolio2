@@ -1,6 +1,5 @@
 <template>
     <div class="yoyo grid_2x3">
-        
         <div class="yoyo__title">
            <h1>Yoyoing !</h1> 
         </div>

@@ -1,0 +1,38 @@
+.browser {
+    grid-row: 1 /4;
+    grid-column: 2;
+    border: 2px solid $color-black;
+    @include flex-center;
+    flex-direction: column;
+    padding: .3rem;
+    &__bar {
+        flex: 0 0 5%;
+        width: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(146deg, rgba(0,0,0,1) 0%, rgba(166,166,166,1) 100%);
+        @include flex-center;
+        & h3 {
+            color: $color-white;
+            margin-right: auto;
+            margin-left: 1rem;
+            font-size: 180%;
+        }
+        &-info {
+            height: 1.8rem;
+            width: 1.8rem ;
+            color: $color-white;
+            background-color: $color-black;
+            margin-right: .5rem;
+            @include flex-center;
+            font-size: 1.2rem;
+        }
+    }
+    &__console {
+        flex: 0 0 10%;
+    }
+    &__window {
+        border: 2px solid $color-black;
+        width: 100%;
+        flex: 1;
+    }
+}
