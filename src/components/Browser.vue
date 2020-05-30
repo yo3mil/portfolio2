@@ -7,21 +7,33 @@
           </div>
       </div>
       <div class="browser__console">
-          .browser__console-
-          <input class="browser__console-input" type="text" placeholder="http://localhost:8080/">
+        <i class="ion-arrow-left-a"></i>
+        <i class="ion-arrow-right-a"></i>
+        <i class="ion-ios-home"></i>
+        <div class="browser__console-input">
+            <i class="ion-ios-world-outline"></i>
+            <input type="text" placeholder="http://localhost:8080/" disabled>
+        </div>
+        <i class="ion-social-youtube"></i>
+        <i class="ion-social-github"></i>
       </div>
       <div class="browser__window">
-
+          <video :src="current" class="browser__display" loop="true" autoplay="true" muted></video>
       </div>
   </div>
 </template>
 
 <script>
+import "@/styles/ionicons.css"
     export default {
-
+        data() {
+            return {
+                current: "http://www.emilwojcik.com/video/invoicing.mp4"
+            }
+        }
     }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
