@@ -78,6 +78,7 @@
                 height: 2px; 
                 background: $color-gray; 
                 outline: none;
+                cursor: pointer; 
                 &::-webkit-slider-thumb {
                     -webkit-appearance: none; 
                     -moz-appearance: none; 

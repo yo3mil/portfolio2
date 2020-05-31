@@ -4,7 +4,7 @@
     <div class="television__antena television__antena-2"></div>
     <div class="television__screen-outer">
         <div class="television__screen-inner">
-          <video :src="current" class="television__display" loop="true" autoplay="true" muted></video>
+          <video id="video" :src="current" class="television__display" loop="true" autoplay="true" muted></video>
         </div>
     </div>
     <div class="television__console">
@@ -21,7 +21,7 @@
           <h3>video 4</h3>
         </div>
         <div class="television__console-controls">
-          <input type="range" :value="volume" max="1" step="0.01"  class="television__console-controls_slider" id="myRange">
+          <input @input="toggleMute()" type="range" v-model="volume" min="0" max="1" step="0.01"  class="television__console-controls_slider" id="myRange">
         </div>
         <div class="television__console-vent">
           <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr>
@@ -42,7 +42,7 @@ export default {
       video2: "http://www.emilwojcik.com/video/smashing.mp4",
       video3: "http://www.emilwojcik.com/video/quadro.mp4",
       video4: "http://www.emilwojcik.com/video/tokyo.mp4",
-      current:'',
+      current: '',
       volume: 0
     }
   },
@@ -55,6 +55,16 @@ export default {
       setTimeout(() => {
         this.current = video;
       }, timing)
+    },
+    toggleMute() {
+      console.log("hello")
+      var video = document.getElementById("video");
+        if(video.muted) {
+          video.muted = !video.muted;
+        }
+        
+        video.volume = this.volume;
+        console.log(this.volume)
     }
   }
 }
