@@ -1,9 +1,27 @@
+//basic route transition
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
 @keyframes slideRight{
     0% {
+        opacity: .6;
+        transform: translateX(-20%);
+    } 100% {
+        opacity: .7;
         transform: translateX(0%);
+    }
+}
+@keyframes show {
+    0% {
         opacity: 0;
     } 100% {
-        transform: translateX(10%); 
         opacity: 1;
     }
 }
@@ -15,3 +33,98 @@
         transform: translateY(15%);
     }
 }
+
+// HOME TRANSITIONS
+// ENTER from right
+.slide-right-left-enter-active {
+    animation: slide-right-left 1s ;
+}
+.slide-right-left-leave-active {
+    animation: slide-right-left 1s reverse;
+}
+@keyframes slide-right-left {
+    0% {transform: translateX(300%);} 
+    100% {transform: translateX(0%);}
+}
+///////////////////////////////////////////
+// ENTER from left
+.slide-left-right-enter-active {
+    animation: slide-left-right 1s ;
+}
+.slide-left-right-leave-active {
+    animation: slide-left-right 1s reverse;
+}
+@keyframes slide-left-right {
+    0% {transform: translateX(-300%);} 
+    100% {transform: translateX(0%);}
+}
+///////////////////////////////////////////
+// ENTER from top
+.slide-top-down-enter-active {
+animation: slide-top-down 1s ;
+}
+.slide-top-down-leave-active {
+animation: slide-top-down 1s reverse;
+}
+@keyframes slide-top-down {
+    0% {transform: translateY(-300%);} 
+    100% {transform: translateY(0%); }
+}
+///////////////////////////////////////////
+// ENTER from bottom
+.slide-down-top-enter-active {
+animation: slide-down-top 1s ;
+}
+.slide-down-top-leave-active {
+animation: slide-down-top 1s reverse;
+}
+@keyframes slide-down-top {
+    0% {transform: translateY(300%);} 
+    100% {transform: translateY(0%); }
+}
+
+//////////////////////////////////////////////////////////////
+// TV walks in 
+
+.walk-in-enter-active {
+    animation: walk-in .8s ;
+    animation-timing-function: ease-in;
+}
+.walk-in-leave-active {
+    animation: walk-in 2s reverse;
+}
+@keyframes walk-in {
+    0% {
+        transform: translateY(-150%) rotate(2deg);
+    } 
+    90% {
+        transform: translateY(-0%) rotate(2deg);
+    }
+    95% {
+        transform: translateY(-0%) rotate(-1deg);
+    }
+    100% {
+        transform: translateY(-0%) rotate(0deg);
+    }
+}
+
+//////////////////////////////////////////////////////////////
+// bum in and out
+.bump-enter-active {
+    animation: bump .5s forwards;
+    animation-delay: 2s;
+}
+.bump-leave-active {
+    animation: bump .5s reverse;
+}
+@keyframes bump {
+    0% {
+        transform: scale(.1) ;
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(-20deg);
+    }
+}
+

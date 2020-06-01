@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="app grid_main">
-    
-    <router-view/>
-    
+    <transition name="fade" mode="out-in">
+      <router-view/>
+    </transition>
     <router-link tag="div" to="/" class="app__title">
       <h1>Emil</h1>
       <h1>WOjcik</h1>
