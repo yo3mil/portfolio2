@@ -50,7 +50,7 @@ export default {
     this.playVideo(this.video1)
   },
   methods: {
-    playVideo(video, timing = 1500){
+    playVideo(video, timing = 2200){
       this.current = this.noise;
       setTimeout(() => {
         this.current = video;

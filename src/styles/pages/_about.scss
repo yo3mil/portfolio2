@@ -1,0 +1,74 @@
+.about {
+    grid-row: 2;
+    grid-column: 2;
+
+    &__graphic {
+        grid-row: 1 / 4;
+        grid-column: 1;
+        height: 70vh;
+        transform: translate(-40%, -10%) rotate(10deg);
+        &-img {
+            height: 100%;
+        }
+    }
+    &__window {
+        grid-row: 1  / -1;
+        grid-column: 2;
+        display: flex;
+        height: 100%;
+        @include flex-center;
+        &-description {
+            flex: 0 0 55%;
+            height: 70%;
+            margin-top: -4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-right: 20%;
+            & h1 {
+                margin-left: -1rem;
+                margin-bottom: 1rem;
+                font-size: 2vw;
+            }
+            & p {
+                font-size: .8vw;
+            }
+            &-nick {
+                margin-right: -2rem;
+                margin-left: 2rem;
+                & div {
+                    @include flex-center;
+                    width: 70%;
+                    border: 1px solid $color-black;
+                    padding: .5rem;
+                }
+            }
+            &-abilities {
+                & div {
+                    border: 1px solid $color-black;
+                    padding: .5rem;
+                }
+            }
+            &-motto {
+                margin-right: -2rem;
+                margin-left: 2rem;
+            }
+        }
+        &-portrait {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 84%);
+            flex: 1;
+            height: 85%;
+            background-color: $color-black;
+            @include flex-center;
+            
+            &-img {
+                
+                height: 99%;
+                width: 98.5%;
+                padding: 5% 10% 0 10%;
+                background-color: $color-white;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 84%);
+            }
+        }
+    }
+}

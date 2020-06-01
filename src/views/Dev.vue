@@ -9,11 +9,14 @@
         <h1 @click="changeTo(projectFive)" :class="{active: current === projectFive}">{{ projectFive.name }}</h1>
       </div>
       <div class="dev__description">
-        <p>
-         {{ current.description }} 
-        </p>
+        <transition name="fade">
+
+          <p v-if="toggle">
+          {{ current.description }} 
+          </p>
+        </transition>
       </div>
-      <browser :video="current"></browser>
+        <browser :video="current"></browser>
   </div>
 </template>
 
@@ -62,19 +65,25 @@ export default {
         live: "",
         git: "https://github.com/yo3mil/"
       },
-      minigame: true
+      minigame: true,
+      toggle: true
       
     }
   },
   mounted() {
     setTimeout(()=>{
       this.current = this.projectOne;
-    }, 500)
+    }, 100)
     
   },
   methods: {
     changeTo(project) {
-      this.current = project;
+      this.toggle = false;
+      setTimeout(()=>{
+        this.current = project;
+        this.toggle = true;
+      }, 1000)
+      
     }
   }
 }
@@ -83,5 +92,6 @@ export default {
 <style lang="scss">
   .active {
     color: $color-black;
+    text-decoration: underline;
   }
 </style>
