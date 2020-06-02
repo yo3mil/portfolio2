@@ -18,19 +18,24 @@
         <i class="ion-social-github"></i>
       </div>
       <div class="browser__window">
-          <video :src="video.video" class="browser__display" loop="true" autoplay="true" muted></video>
+            <video v-if="typeof video.video === 'string'" :src="video.video" class="browser__display" loop="true" autoplay="true" muted></video>
+            <game v-if="typeof video.video === 'boolean'"></game>
       </div>
   </div>
 </template>
 
 <script>
 import "@/styles/ionicons.css"
+import Game from "./Game.vue"
     export default {
         props: {
             video: {
                 type: Object,
                 required: true
             }
+        },
+        components: {
+            Game
         },
         data() {
             return {

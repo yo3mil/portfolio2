@@ -1,12 +1,15 @@
 .browser {
+    animation: resize 2s;
+    
     grid-row: 1 /4;
     grid-column: 2;
     border: 2px solid $color-black;
     @include flex-center;
     flex-direction: column;
     padding: .3rem;
+    
     &__bar {
-        flex: 0 0 5%;
+        flex: 0 0 2.5rem;
         width: 100%;
         background: rgb(0,0,0);
         background: linear-gradient(146deg, rgba(0,0,0,1) 0%, rgba(166,166,166,1) 100%);
@@ -28,12 +31,12 @@
         }
     }
     &__console {
-        flex: 0 0 10%;
+        flex: 0 0 3.5rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 96%;
-        font-size: 250%;
+        width: 97%;
+        font-size: 240%;
         & i {
             cursor: pointer;
         }
@@ -42,10 +45,15 @@
             height: 50%;
             position: relative;
             & i {
+                
+                font-size: 2vh;
                 position: absolute;
                 z-index: 2;
-                margin: 6px 0 0 10px;
+                margin-left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
                 color: $color-gray;
+                
             }
             & input {
                 position: absolute;

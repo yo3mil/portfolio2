@@ -3,7 +3,7 @@
       <div class="dev__projects">
         <h1 @click="changeTo(projectOne)" :class="{active: current === projectOne}">{{ projectOne.name }}</h1>
         <h1 @click="changeTo(projectTwo)" :class="{active: current === projectTwo}">{{ projectTwo.name }}</h1>
-        <h1>Mini Game</h1>
+        <h1 @click="changeTo(minigame)" :class="{active: current === minigame}">Mini Game</h1>
         <h1 @click="changeTo(projectThree)" :class="{active: current === projectThree}">{{ projectThree.name }}</h1>
         <h1 @click="changeTo(projectFour)" :class="{active: current === projectFour}">{{ projectFour.name }}</h1>
         <h1 @click="changeTo(projectFive)" :class="{active: current === projectFive}">{{ projectFive.name }}</h1>
@@ -65,24 +65,29 @@ export default {
         live: "",
         git: "https://github.com/yo3mil/"
       },
-      minigame: true,
+      minigame: {
+        video: true,
+        description: "Lorem ipsum dolor sit amet, consectetur"
+      },
       toggle: true
       
     }
   },
   mounted() {
+    this.current = {};
     setTimeout(()=>{
       this.current = this.projectOne;
-    }, 100)
+    }, 2000)
     
   },
   methods: {
     changeTo(project) {
+      
       this.toggle = false;
       setTimeout(()=>{
         this.current = project;
         this.toggle = true;
-      }, 1000)
+      }, 100)
       
     }
   }
