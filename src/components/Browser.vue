@@ -1,5 +1,5 @@
 <template>
-  <div class="browser">
+  <div class="browser" >
       <div class="browser__bar">
           <h3>Explorer 1.1</h3>
           <!-- <div class="browser__bar-info">
