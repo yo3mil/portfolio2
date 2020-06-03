@@ -1,0 +1,91 @@
+.messenger {
+    grid-row: 1 / 4;
+    grid-column: 2;
+
+    &__window {
+        grid-row: 1 /9;
+        grid-column: 3 / 9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        &-input {
+            border:none;
+            background-image:none;
+            background-color:transparent;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            font-family: $font-main;
+            color: $color-black;
+            font-size: 1.8vh;
+            text-align: center;
+            width: 75%;
+            margin-left: -10%;
+            &:disabled {
+                user-select: none;
+                cursor: default;
+                -webkit-text-fill-color: $color-black;
+                opacity:1!important; 
+            }
+        }
+    }
+    &__console {
+        grid-row: 9 /11;
+        grid-column: 1 /11;
+        @include flex-center;
+        &-input {
+            border-radius: 25px;
+            width: 50%;
+            height: 3.6rem;
+            padding-left: 2%;
+            padding-right: 5%;
+            font-size: 1.6rem;
+            font-family: $font-main;
+            border: solid 2px $color-black;
+            background-color: $color-gray-light;
+            outline: none;
+        }
+        
+    }
+}
+
+.cloud_right,
+.cloud {
+    background-color: $color-black;
+    clip-path: polygon(90% 0, 90% 75%, 92% 100%, 90% 100%, 0 100%, 0 0);
+    padding: 2px;
+    min-width: 70%;
+    width: min-content;
+    
+    &__area {
+        
+        font-size: 1.6vh;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        clip-path: polygon(90% 0, 90% 80%, 92% 100%, 90% 100%, 0 100%, 0 0);
+        min-height: 4rem;
+        & h3 {
+            height: 100%;
+            margin-right: 10%;
+        }
+    }
+}
+.cloud_right {
+    margin-left: auto;
+    &__area {
+        background-color: $color-gray-light;
+    }
+}
+.cloud {
+    transform: rotateY(180deg);
+    &__area {
+        
+        background-color: $color-white;
+        & input {
+            transform: rotateY(180deg);
+        }
+    }
+}

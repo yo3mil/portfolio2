@@ -1,13 +1,19 @@
 <template>
-  <div>
-      contact me page
+  <div class="contact grid_2x3">
+      <div class="contact__title">
+        <h1>Contact me</h1>
+      </div>
+      <messenger></messenger>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+import Messenger from './../components/Messenger.vue'
+  export default {
+    components: {
+      Messenger
+    }
+  }
 </script>
 
 <style>

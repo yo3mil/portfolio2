@@ -138,13 +138,16 @@ export default {
       this.audio.bg.volume = .2;
     },
     start() {
-      // spawn persons
-      this.personSpawn(this.stage);
-      let self = this;
-      setTimeout(()=> {
-        self.resetPersons(self.person);
-        self.start();
-      }, this.spawn)
+      if(this.gameActive) {
+        // spawn persons
+        this.personSpawn(this.stage);
+        let self = this;
+        setTimeout(()=> {
+          self.resetPersons(self.person);
+          self.start();
+        }, this.spawn)
+      }
+      
     },
     hit(whichone) {
       
