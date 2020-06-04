@@ -86,7 +86,7 @@ export default {
   data() {
     return {
       audio: {
-        splash: new Audio('http://www.emilwojcik.com/sounds/splash.wav'),
+        splash: new Audio('http://www.emilwojcik.com/sounds/gunshot.wav'),
         pain: new Audio('http://www.emilwojcik.com/sounds/pain.wav'),
         bg: new Audio('http://www.emilwojcik.com/sounds/8bit.wav'),
         end: new Audio('http://www.emilwojcik.com/sounds/end.wav')

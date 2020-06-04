@@ -9,17 +9,17 @@
             </div>
             <div v-if="stage >= 2" class="cloud">
                 <div class="cloud__area">
-                    <input class="messenger__window-input" type="text" name="name" id="name" :placeholder="name" disabled>
+                    <input class="messenger__window-input" type="text" name="name" id="name" :placeholder="shortString(name)" disabled>
                 </div>
             </div>
             <div v-if="stage >= 3" class="cloud_right">
                 <div class="cloud_right__area">
-                    <h3>Hello {{ name }}! Now, What would you like to write to Emil?</h3>
+                    <h3>Hello {{ shortString(name) }}! Now, What would you like to write to Emil?</h3>
                 </div>
             </div>
             <div v-if="stage >= 4" class="cloud">
                 <div class="cloud__area">
-                    <input class="messenger__window-input" type="text" :placeholder="msg" disabled>
+                    <input class="messenger__window-input" type="text" :placeholder="shortString(msg)" disabled>
                 </div>
             </div>
            <div v-if="stage >= 5" class="cloud_right">
@@ -35,19 +35,23 @@
             
             <div v-if="stage >= 7" class="cloud_right">
                 <div class="cloud_right__area">
-                    <h3>Great! message send. He will be in touch soon!</h3>
+                    <h3>Great! message sent! He will be in touch soon!</h3>
                 </div>
             </div>
                
         </div>
         
         <div class="messenger__console">
-            <input v-model="input" v-on:keyup.enter="proceed" class="messenger__console-input" type="text" placeholder="Type here...">
+            <input v-model="input" v-on:keyup.enter="proceed" class="messenger__console-input" type="text" maxlength="120" placeholder="Type here...">
+            <i @click="proceed()" class="ion-paper-airplane"></i>
         </div>
+
+        
   </div>
 </template>
 
 <script>
+    import "@/styles/ionicons.css"
     export default {
         data() {
             return {
@@ -59,7 +63,10 @@
             }
         },
         mounted() {
-            this.stage = 1;
+            this.stage = 0;
+            setTimeout(()=>{
+                this.stage = 1;
+            }, 1000)
         },
         methods: {
             proceed() {
@@ -72,8 +79,13 @@
                     this.updateStage()
                 }
                 if(this.stage === 5) {
-                    this.email = this.input;
-                    this.updateStage()
+                    if(this.emailIsValid(this.input)) {
+                         this.email = this.input;
+                        this.updateStage()
+                    } else {
+                        alert('oh noes email wornggg')
+                    }
+                   
                 }
             },
             updateStage() {
@@ -83,6 +95,12 @@
                 setTimeout(()=> {
                     self.stage++
                 }, 500)
+            },
+            emailIsValid (email) {
+                return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+            },
+            shortString(string) {
+                 return (string.length > 30) ? string.substr(0, 30) + '(...)' : string;
             }
         }
     }

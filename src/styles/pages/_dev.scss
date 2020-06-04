@@ -4,7 +4,7 @@
 
     &__projects {
         opacity: 0;
-        animation: show 1s forwards;
+        animation: bump-no-spin 1s forwards;
         animation-delay: 2s;
         grid-column: 1;
         grid-row: 1;
@@ -12,12 +12,12 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-end;
-        margin-right: 20px;
+        margin-right: 2rem;
         color: $color-gray;
         
         & h1 {
-            font-size: 3.1vh;
-            margin-bottom: 2%;
+            font-size: 2.5vh;
+            margin-bottom: 3%;
             
             cursor: pointer;
             
@@ -27,15 +27,16 @@
         }
     }
     &__description {
+        margin-right: 2rem;
         opacity: 0;
-        animation: show 1s forwards;
+        animation: show 3s forwards;
         animation-delay: 2.2s;
         grid-row: 2;
         grid-column: 1;
         display: flex;
         align-items: center;
         text-align: end;
-        padding-right: 1rem;
+        
         font-size: 1.8vh;
     }
 }

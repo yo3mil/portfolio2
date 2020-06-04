@@ -68,6 +68,9 @@
             @include flex-center;
             background-color: $color-gray-light;
             font-size: 1rem;
+            &:hover {
+                background-color: $color-gray;
+            }
 
         }
         &-controls {

@@ -78,7 +78,6 @@ export default {
     setTimeout(()=>{
       this.current = this.projectOne;
     }, 2000)
-    
   },
   methods: {
     changeTo(project) {
@@ -98,5 +97,7 @@ export default {
   .active {
     color: $color-black;
     text-decoration: underline;
+   transform: scale(1.3);
+   margin-right: .4rem;
   }
 </style>

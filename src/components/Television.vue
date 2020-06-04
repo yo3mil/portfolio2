@@ -8,16 +8,16 @@
         </div>
     </div>
     <div class="television__console">
-        <div @click="playVideo(video1, 500)" :class="{active: current == video1}" class="television__console-button">
+        <div @click="playVideo(video1, 500)" :class="{activeVid: current == video1}" class="television__console-button">
           <h3>video 1</h3>
         </div>
-        <div @click="playVideo(video2, 500)" :class="{active: current == video2}" class="television__console-button">
+        <div @click="playVideo(video2, 500)" :class="{activeVid: current == video2}" class="television__console-button">
           <h3>video 2</h3>
         </div>
-        <div @click="playVideo(video3, 500)" :class="{active: current == video3}" class="television__console-button">
+        <div @click="playVideo(video3, 500)" :class="{activeVid: current == video3}" class="television__console-button">
           <h3>video 3</h3>
         </div>
-        <div @click="playVideo(video4, 500)" :class="{active: current == video4}" class="television__console-button">
+        <div @click="playVideo(video4, 500)" :class="{activeVid: current == video4}" class="television__console-button">
           <h3>video 4</h3>
         </div>
         <div class="television__console-controls">
@@ -71,7 +71,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .active {
+  .activeVid {
     background-color: $color-gray;
   }
 </style>
