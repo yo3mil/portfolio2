@@ -127,7 +127,16 @@ animation: slide-down-top 1s reverse;
         transform: scale(1) rotate(-20deg);
     }
 }
-
+@keyframes bump-no-spin {
+    0% {
+        transform: scale(0) ;
+        opacity: 0;
+    } 
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 @keyframes spin {
     0% {
         transform: rotateY(900deg) translateY(300%);
@@ -140,11 +149,15 @@ animation: slide-down-top 1s reverse;
 
 @keyframes resize {
     0% {
-        transform: translateX(300%);
+        transform: translateX(300%) translateY(100%);
+        width: 50%;
+        height: 40%;
+    } 25% {
+        transform: translateX(300%) translateY(100%);
         width: 50%;
         height: 40%;
     } 50% {
-        transform: translateX(0%);
+        transform: translateX(0%) translateY(50%);
         width: 50%;
         height: 40%;
     } 100% {
