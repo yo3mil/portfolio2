@@ -1,7 +1,7 @@
 <template>
   <div class="messenger grid_10x10">
         
-        <div class="messenger__window" id="form" method="post" action="">
+        <form class="messenger__window" id="form" action="https://formspree.io/mbjzoazw" method="POST">
             <div v-if="stage >= 1" class="cloud_right">
                 <div class="cloud_right__area">
                     <h3>Hello ! What is your name ?</h3>
@@ -9,7 +9,7 @@
             </div>
             <div v-if="stage >= 2" class="cloud">
                 <div class="cloud__area">
-                    <input class="messenger__window-input" type="text" name="name" id="name" :placeholder="shortString(name)" disabled>
+                    <input class="messenger__window-input" type="text" name="_subject" id="name" v-model="name" readonly>
                 </div>
             </div>
             <div v-if="stage >= 3" class="cloud_right">
@@ -19,7 +19,7 @@
             </div>
             <div v-if="stage >= 4" class="cloud">
                 <div class="cloud__area">
-                    <input class="messenger__window-input" type="text" :placeholder="shortString(msg)" disabled>
+                    <textarea class="messenger__window-input" name="message" type="text" v-model="msg" readonly> readonly></textarea>
                 </div>
             </div>
            <div v-if="stage >= 5" class="cloud_right">
@@ -29,7 +29,7 @@
             </div>
             <div v-if="stage >= 6" class="cloud">
                 <div class="cloud__area">
-                    <input class="messenger__window-input" type="text" name="email" id="email" :placeholder="email"  disabled>
+                    <input class="messenger__window-input" type="email" name="_replyto" id="email" v-model="email" readonly>
                 </div>
             </div>
             
@@ -39,7 +39,7 @@
                 </div>
             </div>
                
-        </div>
+        </form>
         
         <div class="messenger__console">
             <input v-model="input" v-on:keyup.enter="proceed" class="messenger__console-input" type="text" maxlength="120" placeholder="Type here...">
@@ -81,7 +81,8 @@
                 if(this.stage === 5) {
                     if(this.emailIsValid(this.input)) {
                          this.email = this.input;
-                        this.updateStage()
+                        this.updateStage();
+                        this.submit();
                     } else {
                         alert('oh noes email wornggg')
                     }
@@ -95,6 +96,9 @@
                 setTimeout(()=> {
                     self.stage++
                 }, 500)
+            },
+            submit() {
+                document.getElementById('form').submit();
             },
             emailIsValid (email) {
                 return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)

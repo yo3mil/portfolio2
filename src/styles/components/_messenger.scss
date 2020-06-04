@@ -35,7 +35,7 @@
                 cursor: default;
                 -webkit-text-fill-color: $color-black !important;
                 
-                opacity:1!important; 
+                
             }
         }
     }
@@ -110,8 +110,19 @@
     &__area {
         
         background-color: $color-white;
-        & input {
+        & input,
+        & textarea {
             transform: rotateY(180deg);
+            overflow: auto;
+            resize: none;
+            text-align: center;
+            &:focus {
+                outline: none;
+            }
+            &:-webkit-scrollbar {
+                display: none;
+              }
         }
+        
     }
 }
