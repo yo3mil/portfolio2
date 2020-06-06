@@ -2,6 +2,9 @@
     height: 100%;
 
     &__title {
+        animation: show 2s forwards;
+        
+        opacity: 0;
         display: flex;
         flex-direction: column;
         grid-row: 2;

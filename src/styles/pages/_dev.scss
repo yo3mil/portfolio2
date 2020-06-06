@@ -4,7 +4,7 @@
 
     &__projects {
         opacity: 0;
-        animation: bump-no-spin 1s forwards;
+        animation: show 1s forwards;
         animation-delay: 2s;
         grid-column: 1;
         grid-row: 1;
@@ -13,7 +13,7 @@
         justify-content: flex-start;
         align-items: flex-end;
         margin-right: 2rem;
-        color: $color-gray;
+        color: rgba($color-black, 0.6);
         
         & h1 {
             font-size: 2.5vh;
@@ -27,16 +27,29 @@
         }
     }
     &__description {
-        margin-right: 2rem;
-        opacity: 0;
-        animation: show 3s forwards;
-        animation-delay: 2.2s;
-        grid-row: 2;
-        grid-column: 1;
-        display: flex;
-        align-items: center;
-        text-align: end;
         
+        //margin-right: 2rem;
+        @include flex-center;
+        animation: bump-no-spin 1s forwards;
+        opacity: 0;
+        margin-right: 1rem;
+        margin-left: -2rem;
+        animation-delay: 0s;
+        grid-row: 2 / 4;
+        grid-column: 1;
+        transition: all 1s;
+        height: min-content;
+        min-width: 50%;
+        padding: 2rem 3rem 2rem 3rem;
+        //text-align: end;
+        border: 2px solid $color-black;
+        border-radius: 50%;
+        max-width: 200%;
         font-size: 1.8vh;
+        & p {
+            transition: all .5s;
+            width: auto;
+            text-align: center;
+        }
     }
 }

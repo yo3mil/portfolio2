@@ -9,7 +9,7 @@
             </div>
             <div v-if="stage >= 2" class="cloud">
                 <div class="cloud__area">
-                    <input class="messenger__window-input" type="text" name="_subject" id="name" v-model="name" readonly>
+                    <input class="messenger__window-input" type="text" name="_subject" id="name" v-model="name">
                 </div>
             </div>
             <div v-if="stage >= 3" class="cloud_right">
