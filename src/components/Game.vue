@@ -112,6 +112,9 @@ export default {
       } 
     }
   },
+  beforeDestroy() {
+    this.audio.bg.pause();
+  },
   methods: {
     resetPersons(person) {
       for(let i = 0; i < this.person.length; i++) {

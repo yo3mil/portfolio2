@@ -1,24 +1,31 @@
 <template>
   <div class="browser" >
       <div class="browser__bar">
-          <h3>Explorer 1.1</h3>
-          <!-- <div class="browser__bar-info">
-              ?
-          </div> -->
+          <h3>project Explorer 1.11</h3>
+          
       </div>
       <div class="browser__console">
-        <i class="ion-arrow-left-a"></i>
+        <!-- <i class="ion-arrow-left-a"></i>
         <i class="ion-arrow-right-a"></i>
-        <i class="ion-ios-home"></i>
+        <i class="ion-ios-home"></i> -->
+        <i class="ion-social-youtube" :class="{inactive: video.live === ''}"></i>
+        <i class="ion-social-github" :class="{inactive: video.git === ''}"></i>
         <div class="browser__console-input">
             <i class="ion-ios-world-outline"></i>
-            <input type="text" placeholder="http://localhost:8080/" disabled>
+            <input type="text" placeholder="http://localhost:8080/" readonly>
         </div>
-        <i class="ion-social-youtube"></i>
-        <i class="ion-social-github"></i>
+        <!-- <i class="ion-arrow-right-a"></i> -->
+        <i v-if="view" class="ion-eye" @click="changeView()"></i>
+        <i v-if="!view" class="ion-eye-disabled" @click="changeView()"></i>
       </div>
       <div class="browser__window">
-            <video v-if="typeof video.video === 'string'" :src="video.video" class="browser__display" loop="true" autoplay="true" muted></video>
+            <video
+                v-if="typeof video.video === 'string'" 
+                :src="video.video" class="browser__display" 
+                :class="{window: !view}"
+                loop="true" autoplay="true" muted
+                id="projectVid"
+             ></video>
             <game v-if="typeof video.video === 'boolean'"></game>
       </div>
   </div>
@@ -39,12 +46,24 @@ import Game from "./Game.vue"
         },
         data() {
             return {
-                
+                view: true
+            }
+        },
+        methods: {
+            changeView() {
+                this.view = !this.view;
+                document.getElementById('projectVid').controls = !document.getElementById('projectVid').controls;
             }
         }
     }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" >
+    .inactive {
+        color: $color-gray-light;
+    }
+    .window {
+        object-fit: scale-down;
+        
+    }
 </style>

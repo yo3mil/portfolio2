@@ -3,22 +3,16 @@
     <transition name="fade" mode="out-in">
       <router-view/>
     </transition>
-   
-      <!-- <router-link v-if="intro" tag="div" to="/home" class="app__intro">
-        <h1>ENTER</h1>
-      </router-link> -->
-     
-      <router-link tag="div" to="/home" class="app__title">
-        <h1>Emil</h1>
-        <h1>WOjcik</h1>
-        <transition name="fade">
-        <div v-if="back" class="app__title-return">
-          <i class="ion-arrow-return-left"></i>
-          <h3>take me back</h3>
-        </div>
-        </transition>
-      </router-link>
-    
+    <router-link tag="div" to="/" class="app__title">
+      <h1>Emil</h1>
+      <h1>WOjcik</h1>
+      <transition name="fade">
+      <div v-if="back" class="app__title-return">
+        <i class="ion-arrow-return-left"></i>
+        <h3>take me back</h3>
+      </div>
+      </transition>
+    </router-link>
   </div>
 </template>
 
@@ -28,13 +22,12 @@
   export default {
     data() {
       return {
-        //intro: true
         back: false
       }
     },
     watch: {
       $route: function() {
-        if (this.$route.path === "/home") {
+        if (this.$route.path === "/") {
           this.back = false;
         } else  {
           this.back = true;
