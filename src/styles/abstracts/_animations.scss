@@ -167,3 +167,23 @@ animation: slide-down-top 1s reverse;
         height: 100%;
     }
 }
+
+// home yoyo swing 
+
+@keyframes yoyo-swing {
+    0% {
+        transform-origin: top center;
+        transform: rotate(5deg);
+    }
+    
+    50% {
+        transform-origin: top center;
+        transform: rotate(-5deg);
+    }
+    
+    100% {
+        transform-origin: top center;
+        transform: rotate(5deg);
+    }
+    
+} 

@@ -31,28 +31,28 @@ export default {
       current: {},
       projectOne: {
         name: "Invoicer",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet lobortis diam, sit amet semper orci. Duis tincidunt ex in erat ullamcorper, at elementum turpis consequat. Nunc lacinia aliquam mauris sit amet tempor. Etiam vehicula arcu non felis vulputate semper. Maecenas elementum tortor fermentum ligula convallis",
+        description: "Invoicing and product/customer management app made for Orientalmart.co.uk - UK’s top oriental food supplier. Lightweight and powerful it’s currently being used as a main invoicing tool in their wholesale department.",
         video: "http://www.emilwojcik.com/video/invoicing.mp4",
-        live: "www.youtube.com",
-        git: "www.github.com"
+        live: "https://www.youtube.com",
+        git: "https://www.github.com"
       },
       projectTwo: {
         name: "City Break",
-        description: " sit amet semper orci. Duis tincidunt ex in erat ullamcorper, at elementum turpis consequat. Nunc lacinia aliquam mauris sit amet tempor. Etiam vehicula arcu non felis vulputate semper. Maecenas elementum tortor fermentum ligula convallis ullamcorper. Morbi varius ullamcorper rutrum.",
+        description: "Little widget which compares the temperatures in capital cities around Europe with the current location of its user. Originally made with in vanilla, recently refactored with Vue.js - both versions of the code are available under the GitHub link.",
         video: "http://www.emilwojcik.com/video/citybreak.mp4",
         live: "www.emilwojcik.com/citybreak",
         git: "https://github.com/yo3mil/CityBreakVue"
       },
       projectThree: {
         name: "Old Portfolio",
-        description: "Nunc sit amet lobortis diam, sit amet semper orci. Duis tincidunt ex in erat ullamcorper, at elementum turpis consequat. Nunc lacinia aliquam mauris sit amet tempor. Etiam vehicula arcu non felis vulputate semper. Maecenas elementum tortor fermentum ligula convallis ullamcorper. Morbi varius ullamcorper rutrum.",
+        description: "Pretty much the first website I have ever created. Although buggy and far from perfect, it is great to look back and see creative transitions I have managed to pull with next to zero JavaScript involved. ",
         video: "http://www.emilwojcik.com/video/portfolio.mp4",
         live: "",
         git: "https://github.com/yo3mil/portfolio"
       },
       projectFour: {
         name: "Manda Yuen",
-        description: " Nunc sit amet lobortis diam, sit amet semper orci. Duis tincidunt ex in erat ullamcorper, at elementum turpis consequat. Nunc lacinia aliquam mauris sit amet tempor. Etiam vehicula arcu non felis vulputate semper. Maecenas elementum tortor fermentum ligula convallis ullamcorper. Morbi varius ullamcorper rutrum.",
+        description: "A portfolio website for UK based graphic designer. This very simple website was exactly what my client had expected from me. ",
         video: "http://www.emilwojcik.com/video/manda.mp4",
         live: "www.mandayuen.com",
         git: ""
@@ -66,7 +66,7 @@ export default {
       },
       minigame: {
         video: true,
-        description: "Lorem ipsum dolor sit amet, consectetur",
+        description: "Press start to kill some zombies and save our planet from an apocalypse. Game made on “on a lap” as a single Vue component, pastable into every window posible. ",
         git: '',
         live: ''
       },

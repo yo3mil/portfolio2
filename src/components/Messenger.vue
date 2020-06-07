@@ -1,7 +1,7 @@
 <template>
-  <div class="messenger grid_10x10">
+  <div class="messenger grid_10x10 ">
         
-        <form class="messenger__window" id="form" action="https://formspree.io/mbjzoazw" method="POST">
+        <form class="messenger__window shadow-all" id="form" action="https://formspree.io/mbjzoazw" method="POST">
             <div v-if="stage >= 1" class="cloud_right">
                 <div class="cloud_right__area">
                     <h3>Hello ! What is your name ?</h3>
@@ -42,7 +42,7 @@
         </form>
         
         <div class="messenger__console">
-            <input v-model="input" v-on:keyup.enter="proceed" class="messenger__console-input" type="text" maxlength="120" placeholder="Type here...">
+            <input v-model="input" v-on:keyup.enter="proceed" class="messenger__console-input shadow-all" type="text" maxlength="120" placeholder="Type here...">
             <i @click="proceed()" class="ion-paper-airplane"></i>
         </div>
 
@@ -98,7 +98,7 @@
                 }, 500)
             },
             submit() {
-                document.getElementById('form').submit();
+               //document.getElementById('form').submit();
             },
             emailIsValid (email) {
                 return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)

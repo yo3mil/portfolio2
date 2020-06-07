@@ -1,20 +1,17 @@
 <template>
-  <div class="browser" >
+  <div class="browser shadow-all" >
       <div class="browser__bar">
           <h3>project Explorer 1.11</h3>
           
       </div>
       <div class="browser__console">
-        <!-- <i class="ion-arrow-left-a"></i>
-        <i class="ion-arrow-right-a"></i>
-        <i class="ion-ios-home"></i> -->
-        <i class="ion-social-youtube" :class="{inactive: video.live === ''}"></i>
-        <i class="ion-social-github" :class="{inactive: video.git === ''}"></i>
+        <a :href="video.live" target="_blank" ><i :class="{inactive: video.live === ''}" class="ion-social-youtube"></i></a>
+        <a :href="video.git" target="_blank" ><i :class="{inactive: video.git === ''}" class="ion-social-github"></i></a>
         <div class="browser__console-input">
             <i class="ion-ios-world-outline"></i>
             <input type="text" placeholder="http://localhost:8080/" readonly>
         </div>
-        <!-- <i class="ion-arrow-right-a"></i> -->
+        
         <i v-if="view" class="ion-eye" @click="changeView()"></i>
         <i v-if="!view" class="ion-eye-disabled" @click="changeView()"></i>
       </div>
@@ -51,8 +48,12 @@ import Game from "./Game.vue"
         },
         methods: {
             changeView() {
-                this.view = !this.view;
-                document.getElementById('projectVid').controls = !document.getElementById('projectVid').controls;
+                if(this.video.video != true) {
+                    this.view = !this.view;
+                    document.getElementById('projectVid').controls = !document.getElementById('projectVid').controls;
+                }
+                
+                
             }
         }
     }
@@ -60,7 +61,8 @@ import Game from "./Game.vue"
 
 <style lang="scss" >
     .inactive {
-        color: $color-gray-light;
+        color: $color-gray-light !important;
+        pointer-events: none;
     }
     .window {
         object-fit: scale-down;

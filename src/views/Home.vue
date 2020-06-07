@@ -4,7 +4,7 @@
     <!--dev element-->
     <transition name="slide-left-right">
       <div @click="move('/dev')" v-show="animation" class="home__desk" >
-        <img class="home__img" src="./../assets/desk.png" alt="my desktop pc here :)">
+        <img class="home__img shadow" src="./../assets/desk.png" alt="my desktop pc here :)">
       </div>
     </transition>
     <div v-show="animation" class="home__desk-popup home__desk-popup_1">
@@ -17,7 +17,7 @@
     <!--about element-->
     <transition name="slide-down-top">
       <div @click="move('/about')" v-show="animation" class="home__chair">
-        <img  class="home__img" src="./../assets/back-chair.png" alt="back of me">
+        <img  class="home__img shadow" src="./../assets/back-chair.png" alt="back of me">
       </div>
     </transition>
     <div v-show="animation" class="home__chair-popup home__chair-popup">
@@ -26,8 +26,8 @@
 
     <!--yoyo element-->
     <transition name="slide-top-down">
-      <div v-show="animation" @click="move('/yoyo')" class="home__yoyo" >
-        <img class="home__img" src="./../assets/yoyo-straight.png" alt="yoyo!">
+      <div v-show="animation" @click="move('/yoyo')" class="home__yoyo shadow" >
+        <img class="home__img" src="./../assets/bigyoyo-noframe.png" alt="yoyo!">
       </div>
     </transition>
     <div v-show="animation" class="home__yoyo-popup home__yoyo-popup_1">
@@ -40,7 +40,7 @@
     <!--contact element-->
     <transition name="slide-right-left">
       <div @click="move('/contact')" v-show="animation" class="home__contact">
-        <img class="home__img" src="./../assets/contact.png" alt="typing on my mobile">
+        <img class="home__img shadow" src="./../assets/contact.png" alt="typing on my mobile">
       </div>
     </transition>
     <div v-show="animation" class="home__contact-popup home__contact-popup">
@@ -83,7 +83,8 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-
+<style lang="scss" scoped>
+// yoyo has shadow on container due to animation
+  
   
 </style>

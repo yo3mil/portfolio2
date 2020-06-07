@@ -3,28 +3,50 @@
     grid-column: 2;
 
     &__title {
-        border: 2px solid $color-black;
-        
-        border-radius: 50%;
-        height: 25vh;
-        padding: 2rem;
-        @include flex-center;
-        font-size: 6vh;
-        justify-self: flex-end;
-        align-self: flex-end;
-        margin-bottom: -50%;
-        margin-right: -20%;
-        animation: bump 1s forwards;
-        animation-delay: 1s;
         opacity: 0;
-        & i {
-            margin-right: 2vh;
-            transition: all .2s;
-            &:hover {
-                transform: scale(1.1);
-                cursor: pointer;
+        animation: bump 1s forwards;
+        animation-delay: 1.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 2px solid $color-black;
+        border-radius: 50%;
+        grid-row: 2;
+        margin-top: -20%;
+        margin-bottom: 20%;
+        &-social {
+            font-size: 6vh;
+            & a {
+                text-decoration: none;
+                color: $color-black;
+                &:active,
+                &:visited {
+                    color: $color-black;
+                }
+            }
+            & i {
+                margin-right: 2vh;
+                transition: all .2s;
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
             }
         }
+        & a {
+            text-decoration: none;
+            color: $color-black;
+            &:active,
+            &:visited {
+                color: $color-black;
+            }
+        }
+        & h3 {
+            
+            font-size: 3vh;
+        }
+        
     }
     &__social {
         animation: bump 2s forwards;

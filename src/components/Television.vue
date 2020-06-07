@@ -1,5 +1,5 @@
 <template>
-  <div class="television grid_10x10">
+  <div class="television grid_10x10 shadow-all">
     <div class="television__antena television__antena-1"></div>
     <div class="television__antena television__antena-2"></div>
     <div class="television__screen-outer">
