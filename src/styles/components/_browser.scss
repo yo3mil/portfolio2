@@ -9,7 +9,9 @@
     @include flex-center;
     flex-direction: column;
     padding: .3rem;
-    
+    @media (max-width: 900px) {
+        display: none;
+    }
     &__bar {
         flex: 0 0 2.5rem;
         width: 100%;

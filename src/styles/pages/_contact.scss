@@ -15,7 +15,11 @@
         grid-row: 2;
         margin-top: -20%;
         margin-bottom: 20%;
+        @media (max-width: 900px) {
+            display: none;
+          }
         &-social {
+            
             font-size: 6vh;
             & a {
                 text-decoration: none;
@@ -60,6 +64,7 @@
         justify-self: flex-end;
         @include flex-center;
         flex-direction: column;
+        
         &-icon {
             width: 100%;
             flex: 0 0 50%;
