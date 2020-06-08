@@ -4,7 +4,7 @@
         <form class="messenger__window shadow-all" id="form" action="https://formspree.io/mbjzoazw" method="POST">
             <div v-if="stage >= 1" class="cloud_right">
                 <div class="cloud_right__area">
-                    <h3>Hello ! What is your name ?</h3>
+                    <h3>Hello ! What's your name ?</h3>
                 </div>
             </div>
             <div v-if="stage >= 2" class="cloud">
@@ -14,28 +14,28 @@
             </div>
             <div v-if="stage >= 3" class="cloud_right">
                 <div class="cloud_right__area">
-                    <h3>Hello {{ shortString(name) }}! Now, What would you like to write to Emil?</h3>
+                    <h3>Welcome {{ shortString(name) }}! Now, What would you like to write to Emil?</h3>
                 </div>
             </div>
             <div v-if="stage >= 4" class="cloud">
                 <div class="cloud__area">
-                    <textarea class="messenger__window-input" name="message" type="text" v-model="msg" readonly> readonly></textarea>
+                    <textarea class="messenger__window-input" name="message" type="text" v-model="msg"> readonly></textarea>
                 </div>
             </div>
            <div v-if="stage >= 5" class="cloud_right">
                 <div class="cloud_right__area">
-                    <h3>Okey dockey! I will pass it on. Lastly, what is your email address so Emil can reply to your message ?</h3>
+                    <h3>Awesome! Lastly, type your email address (I need it to send this message).</h3>
                 </div>
             </div>
             <div v-if="stage >= 6" class="cloud">
                 <div class="cloud__area">
-                    <input class="messenger__window-input" type="email" name="_replyto" id="email" v-model="email" readonly>
+                    <input class="messenger__window-input" type="email" name="_replyto" id="email" v-model="email">
                 </div>
             </div>
             
             <div v-if="stage >= 7" class="cloud_right">
                 <div class="cloud_right__area">
-                    <h3>Great! message sent! He will be in touch soon!</h3>
+                    <h3>Great! message sent. you did great!</h3>
                 </div>
             </div>
                

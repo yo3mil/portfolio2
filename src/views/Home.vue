@@ -47,6 +47,10 @@
       <h1>Contact me.</h1>
     </div>
 
+    <div class="home__mobile">
+      <h1>Emil</h1>
+      <h1>WOjcik</h1>
+    </div>
   </div>
 </template>
 

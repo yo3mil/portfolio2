@@ -16,6 +16,17 @@
         </div>
       
         <browser :video="current"></browser>
+
+        <div class="dev__mobile">
+          <div v-if="current.live != ''" v- class="dev__mobile-link">
+            <i class="ion-social-youtube"></i>
+            <a :href="current.live">Live Preview</a>
+          </div>
+          <div v-if="current.git != ''" class="dev__mobile-link">
+            <i class="ion-social-github"></i>
+            <a :href="current.git">GitHub</a>
+          </div>
+        </div>
   </div>
 </template>
 
@@ -31,7 +42,7 @@ export default {
       current: {},
       projectOne: {
         name: "Invoicer",
-        description: "Invoicing and product/customer management app made for Orientalmart.co.uk - UK’s top oriental food supplier. Lightweight and powerful it’s currently being used as a main invoicing tool in their wholesale department.",
+        description: "Invoicing and product/customer management web app I made for Orientalmart.co.uk - UK’s top oriental food supplier. Lightweight, powerful and packed with useful features, it’s currently being used as their main wholesale invoicing tool.",
         video: "http://www.emilwojcik.com/video/invoicing.mp4",
         live: "https://www.youtube.com",
         git: "https://www.github.com"
