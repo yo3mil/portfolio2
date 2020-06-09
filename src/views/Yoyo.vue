@@ -14,7 +14,7 @@
             <television v-show="animation"></television>
         </transition>
         <div class="dev__mobile">
-            <div v- class="dev__mobile-link">
+            <div class="dev__mobile-link shadow-all">
                 <i class="ion-social-youtube"></i>
                 <a href="https://www.youtube.com/results?search_query=emil+wojcik+yoyo">Youtube</a>
             </div>

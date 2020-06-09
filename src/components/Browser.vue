@@ -5,8 +5,8 @@
           
       </div>
       <div class="browser__console">
-        <a :href="video.live" target="_blank" ><i :class="{inactive: video.live === ''}" class="ion-social-youtube"></i></a>
-        <a :href="video.git" target="_blank" ><i :class="{inactive: video.git === ''}" class="ion-social-github"></i></a>
+        <a :href="video.live" target="_blank" :class="{inactive: video.live === ''}"><i class="ion-social-youtube"></i></a>
+        <a :href="video.git" target="_blank" :class="{inactive: video.git === ''}"><i class="ion-social-github"></i></a>
         <div class="browser__console-input">
             <i class="ion-ios-world-outline"></i>
             <input type="text" placeholder="http://localhost:8080/" readonly>
@@ -43,7 +43,7 @@ import Game from "./Game.vue"
         },
         data() {
             return {
-                view: true
+                view: false
             }
         },
         methods: {
@@ -61,11 +61,13 @@ import Game from "./Game.vue"
 
 <style lang="scss" >
     .inactive {
-        color: $color-gray-light !important;
-        pointer-events: none;
+       pointer-events: none !important;
+        cursor: default;
+        & i {
+             color: $color-gray-light !important;
+        }
     }
     .window {
         object-fit: scale-down;
-        
     }
 </style>

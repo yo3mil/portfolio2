@@ -18,11 +18,11 @@
         <browser :video="current"></browser>
 
         <div class="dev__mobile">
-          <div v-if="current.live != ''" v- class="dev__mobile-link">
+          <div v-if="current.live != ''" class="dev__mobile-link shadow-all">
             <i class="ion-social-youtube"></i>
             <a :href="current.live">Live Preview</a>
           </div>
-          <div v-if="current.git != ''" class="dev__mobile-link">
+          <div v-if="current.git != ''" class="dev__mobile-link shadow-all">
             <i class="ion-social-github"></i>
             <a :href="current.git">GitHub</a>
           </div>
