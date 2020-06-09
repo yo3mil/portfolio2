@@ -56,15 +56,17 @@
         max-width: 200%;
         font-size: 1.8vh;
         @media (max-width: 900px) {
+            height: 100%;
+            border: none;
+            padding: 0;
             grid-column: 1 / 3;
+            grid-row: 2;
             margin-right: auto;
             margin-left: auto;
             width: 70%;
-            margin-top: 5%;
+            font-size: 2.4vh;
         }
-        @media (max-width: 900px) {
-            font-size: 2vh;
-         }
+        
         & p {
             transition: all .5s;
             width: auto;
