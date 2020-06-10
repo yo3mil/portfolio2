@@ -31,32 +31,32 @@
 <script>
 import "@/styles/ionicons.css"
 import Game from "./Game.vue"
-    export default {
-        props: {
-            video: {
-                type: Object,
-                required: true
+export default {
+    props: {
+        video: {
+            type: Object,
+            required: true
+        }
+    },
+    components: {
+        Game
+    },
+    data() {
+        return {
+            view: false
+        }
+    },
+    methods: {
+        changeView() {
+            if(this.video.video != true) {
+                this.view = !this.view;
+                document.getElementById('projectVid').controls = !document.getElementById('projectVid').controls;
             }
-        },
-        components: {
-            Game
-        },
-        data() {
-            return {
-                view: false
-            }
-        },
-        methods: {
-            changeView() {
-                if(this.video.video != true) {
-                    this.view = !this.view;
-                    document.getElementById('projectVid').controls = !document.getElementById('projectVid').controls;
-                }
-                
-                
-            }
+            
+            
         }
     }
+}
 </script>
 
 <style lang="scss" >

@@ -88,10 +88,18 @@ export default {
   mounted() {
     this.toggle = false;
     this.current = {};
-    setTimeout(()=>{
+    // media query for animation
+    let x = window.matchMedia("(max-width: 900px)");
+    if(x.matches) {
       this.current = this.projectOne;
       this.toggle=true;
-    }, 2000)
+    } else {
+      setTimeout(()=>{
+        this.current = this.projectOne;
+        this.toggle=true;
+      }, 2000)
+    }
+    
   },
   methods: {
     changeTo(project) {
