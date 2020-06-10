@@ -26,7 +26,7 @@
           v-bind:style="{ top: person[0].top, left: person[0].left , animationDuration: `${spawn}ms` }"
           @click="hit(0)"
       >
-      <img class="game__person-police" src="./../assets/game/police.png" alt="person">
+      <img class="game__person-police" src="./../assets/game/zombie.png" alt="person">
       <img v-if="person[0].splash" class="game__person-splash" src="./../assets/game/greensplash.png" alt="splash">
     </div>
     <!---------------------------------------------------------------------->
@@ -36,7 +36,7 @@
       v-bind:style="{ top: person[1].top, left: person[1].left , animationDuration: `${spawn}ms` }"
       @click="hit(1)"
     >
-      <img class="game__person-police" src="./../assets/game/police.png" alt="person">
+      <img class="game__person-police" src="./../assets/game/zombie.png" alt="person">
       <img v-if="person[1].splash" class="game__person-splash" src="./../assets/game/greensplash.png" alt="splash">
     </div>
     <!---------------------------------------------------------------------->
@@ -46,7 +46,7 @@
       v-bind:style="{top: person[2].top, left: person[2].left , animationDuration: `${spawn}ms` }"
       @click="hit(2)"
     >
-      <img class="game__person-police" src="./../assets/game/police.png" alt="person">
+      <img class="game__person-police" src="./../assets/game/zombie.png" alt="person">
       <img v-if="person[2].splash" class="game__person-splash" src="./../assets/game/greensplash.png" alt="splash">
     </div>
     <!---------------------------------------------------------------------->
@@ -57,7 +57,7 @@
       v-bind:style="{top: person[3].top, left: person[3].left , animationDuration: `${spawn}ms` }"
       @click="hit(3)"
     >
-      <img class="game__person-police" src="./../assets/game/szef2.png" alt="person">
+      <img class="game__person-police" src="./../assets/game/winnie.png" alt="person">
       <img v-if="person[3].splash" class="game__person-splash" src="./../assets/game/greensplash.png" alt="splash">
     </div>
     <!---------------------------------------------------------------------->
@@ -67,7 +67,7 @@
       v-bind:style="{top: person[4].top, left: person[4].left , animationDuration: `${spawn}ms` }"
       @click="hit(4)"
     >
-      <img class="game__person-police" src="./../assets/game/szef2.png" alt="person">
+      <img class="game__person-police" src="./../assets/game/winnie.png" alt="person">
       <img v-if="person[4].splash" class="game__person-splash" src="./../assets/game/greensplash.png" alt="splash">
     </div>
     <!---------------------------------------------------------------------->
@@ -164,7 +164,7 @@ export default {
           this.score--
           this.gameTimer = this.gameTimer - this.penalty;
         } else {
-          this.audio.splash.play();
+          //this.audio.splash.play();
           this.score++
           // clock max
           if(this.gameTimer > 120) {
@@ -250,7 +250,7 @@ export default {
     },
     lose() {
       this.audio.bg.pause()
-      this.audio.end.play();
+      //this.audio.end.play();
       this.gameActive = false;
       this.endGame.visible = true;
     },
@@ -259,8 +259,8 @@ export default {
       let width = document.getElementById("game").offsetWidth;
       let height = document.getElementById("game").offsetHeight;
       for(let i = 0; i < this.person.length; i++){
-        this.person[i].top = Math.ceil(Math.random() * (height - 200)) + "px";
-        this.person[i].left = Math.ceil(Math.random() * (width - 90)) + "px";
+        this.person[i].top = Math.ceil(Math.random() * (height - 220)) + "px";
+        this.person[i].left = Math.ceil(Math.random() * (width - 200)) + "px";
       }
     }
   }
@@ -419,8 +419,8 @@ export default {
         z-index: 2000;
         position: absolute;
         top: 30px;
-        left: 20px;
-        height: 6vh;
+        left: 40px;
+        height: 8vh;
         width: auto;
           
       }

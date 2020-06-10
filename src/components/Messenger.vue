@@ -98,7 +98,7 @@
                 }, 500)
             },
             submit() {
-               //document.getElementById('form').submit();
+               document.getElementById('form').submit();
             },
             emailIsValid (email) {
                 return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)

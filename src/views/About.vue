@@ -6,21 +6,23 @@
     <div class="about__window">
       <div class="about__window-description">
         <div class="about__window-description-nick">
-          <h1>Nickname:</h1>
+          <h1>background:</h1>
           <div class="shadow-all">
-            <p>"The mighty Mil Mil"</p>
+            <p>Born in Lodz, Poland. Studied English Philology alongside skateboarding to later become a professional yoyo player. Moved to the UK after studies in search of meaning in life. </p>
           </div>
         </div>
         <div class="about__window-description-abilities">
           <h1>Abilities:</h1>
           <div class="shadow-all">
-            <p>I have been sponsored to play it, I have traveled a lot because of it, and I have met most of my best friends thanks to it. Even though nowadays it is more of a side hobby, international yoyo events and competitions are still very important dates in my schedule. Check some of my videos below, in case you think “up and down” is all you can do with a yoyo.</p>
+            <p>Can write web apps and websites using high powers of javascript. In progress of mastering web development acquired Vue.js as one of his main weapons against the users. Very familiar with UX and UI design. Has a great work ethic and is very easy to get along.
+              Impeccable music taste, together with listed web development skills, make him a very worthy opponent.
+            </p>
           </div>
         </div>
         <div class="about__window-description-motto">
-          <h1>Motto:</h1>
+          <h1>Quote:</h1>
           <div>
-            <p>"I have been sponsored to play it, I have traveled a lot because of it"</p>
+            <p>"I like to be an Ace of my personality"</p>
           </div>
         </div>
       </div>

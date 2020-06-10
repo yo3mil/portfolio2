@@ -57,15 +57,13 @@ export default {
       }, timing)
     },
     toggleMute() {
-      console.log("hello")
       var video = document.getElementById("video");
         if(video.muted) {
+          //solves browser autoplay ban
           video.muted = !video.muted;
         }
-        
         video.volume = this.volume;
-        console.log(this.volume)
-    }
+      }
   }
 }
 </script>

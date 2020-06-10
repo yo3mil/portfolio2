@@ -58,10 +58,6 @@
 export default {
   data() {
     return {
-      sounds: {
-        typing: new Audio('http://www.emilwojcik.com/sounds/typing.wav'),
-        iphone: new Audio('http://www.emilwojcik.com/sounds/iphone.mp3')
-      },
       animation: false
     }
   },
@@ -69,15 +65,6 @@ export default {
     this.animation = true;
   },
   methods: {
-    play(sound) {
-      console.log('im over')
-      sound.volume = .2;
-      sound.play()
-      
-    },
-    stop(sound) {
-      sound.pause()
-    },
     move(where) {
       this.animation = false;
       setTimeout(() => {
@@ -88,7 +75,4 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-// yoyo has shadow on container due to animation
-  
-  
 </style>
