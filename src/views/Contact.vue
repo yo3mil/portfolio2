@@ -6,11 +6,10 @@
           <a href="https://www.linkedin.com/in/emil-wojcik-151247bb/"><i class="ion-social-linkedin"></i></a>
           <a href="https://www.facebook.com/emil.wojcik/"><i class="ion-social-facebook"></i></a>
           <a href="https://www.instagram.com/yo3mil/"><i class="ion-social-instagram"></i></a>
-          <!-- <i class="ion-alert"></i>
-          <i class="ion-alert"></i> -->
         </div>
         <a href="mailto:info@emilwojcik.com"><h3>info@emilwojcik.com</h3></a>
       </div>
+      <!--MESSENGER-->
       <messenger></messenger>
   </div>
 </template>
@@ -25,6 +24,3 @@ import Messenger from './../components/Messenger.vue'
   }
 </script>
 
-<style>
-
-</style>

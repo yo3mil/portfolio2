@@ -76,13 +76,9 @@
 </template>
 
 <script>
-//let audio = {
-  //splash: new Audio('/dist/assets/splash1.wav'),
-  //pain: new Audio('/dist/assets/pain.wav')
-//};
+
 
 export default {
-  
   data() {
     return {
       audio: {

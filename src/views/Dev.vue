@@ -14,7 +14,8 @@
             {{ current.description }} 
           </p>
         </div>
-      
+
+        <!--PROJECT EXPLORER-->
         <browser :video="current"></browser>
 
         <div class="dev__mobile">
@@ -70,7 +71,7 @@ export default {
       },
       projectFive: {
         name: "Other",
-        description: " Nunc sit amet lobortis diam, sit amet semper orci. Duis tincidunt ex in erat ullamcorper, at elementum turpis consequat. Nunc lacinia aliquam mauris sit amet tempor. Etiam vehicula arcu non felis vulputate semper. Maecenas elementum tortor fermentum ligula convallis ullamcorper. Morbi varius ullamcorper rutrum",
+        description: "In the process of learning, I have coded tens of little projects and ideas, half of which will never see daylight. All safely stored somewhere in the depths of my computer, ready to be used as an alternative to google search. ",
         video: "http://www.emilwojcik.com/video/others.mp4",
         live: "",
         git: "https://github.com/yo3mil/"
@@ -82,7 +83,6 @@ export default {
         live: ''
       },
       toggle: true
-      
     }
   },
   mounted() {
@@ -113,7 +113,7 @@ export default {
   .active {
     color: $color-black;
     text-decoration: underline;
-   transform: scale(1.3);
-   margin-right: .4rem;
+    transform: scale(1.3);
+    margin-right: .4rem;
   }
 </style>

@@ -32,6 +32,7 @@
                 2vw 
                 [full-end];
     }
+   
 } 
 .grid_12x12 {
     display: grid;
@@ -46,6 +47,8 @@
         grid-template-rows: repeat(12, 7.5vh);
         grid-template-columns: repeat(12, 8vw);
     }
+    
+    
 }
 .grid_2x3 {
     display: grid;

@@ -52,6 +52,10 @@
        -moz-user-select: none; /* Old versions of Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none;
+    @media (max-width: 900px) {
+        overflow-y: scroll;
+    }
+  
   }
   * {
     margin: 0;

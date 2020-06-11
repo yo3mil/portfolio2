@@ -8,13 +8,13 @@
         <div class="about__window-description-nick">
           <h1>background:</h1>
           <div class="shadow-all">
-            <p>Born in Lodz, Poland. Studied English Philology alongside skateboarding to later become a professional yoyo player. Moved to the UK after studies in search of meaning in life. </p>
+            <p>Born in Lodz, Poland. Studied English Philology alongside skateboarding to later become a professional yoyo player. Moved to the UK after the studies in search of meaning in life. </p>
           </div>
         </div>
         <div class="about__window-description-abilities">
           <h1>Abilities:</h1>
           <div class="shadow-all">
-            <p>Can write web apps and websites using high powers of javascript. In progress of mastering web development acquired Vue.js as one of his main weapons against the users. Very familiar with UX and UI design. Has a great work ethic and is very easy to get along.
+            <p>Can write web apps and websites using powers of javascript. In progress of mastering web development acquired Vue.js as one of his main weapons against the users. Very familiar with UX and UI design. Has a great work ethic and is very easy to get along.
               Impeccable music taste, together with listed web development skills, make him a very worthy opponent.
             </p>
           </div>
@@ -33,12 +33,4 @@
   </div>
 </template>
 
-<script>
-export default {
 
-}
-</script>
-
-<style>
-
-</style>

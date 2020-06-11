@@ -32,7 +32,6 @@
                     <input class="messenger__window-input" type="email" name="_replyto" id="email" v-model="email">
                 </div>
             </div>
-            
             <div v-if="stage >= 7" class="cloud_right">
                 <div class="cloud_right__area">
                     <h3>Great! message sent. you did great!</h3>
