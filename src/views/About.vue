@@ -23,7 +23,9 @@
         <div class="about__window-description-motto">
           <h1>Quote:</h1>
           <div>
-            <p>"I like to be an Ace of my personality"</p>
+            <p>
+              "I like to be an Ace of my personality"
+            </p>
           </div>
         </div>
       </div>

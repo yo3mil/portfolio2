@@ -45,6 +45,7 @@ export default {
         name: "Invoicer",
         description: "Invoicing and product/customer management web app I made for Orientalmart.co.uk - UK’s top oriental food supplier. Lightweight, powerful and packed with useful features, it’s currently being used as their main wholesale invoicing tool.",
         video: "http://www.emilwojcik.com/video/invoicerfinal.mp4",
+        // gdrive link: https://drive.google.com/uc?export=download&id=1EXphsFxJqOHZCnQrIp4XPkopPJXLshj4
         live: "http://www.emilwojcik.com/video/invoicerfinal.mp4",
         git: "https://github.com/yo3mil/"
       },
