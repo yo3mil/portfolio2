@@ -100,6 +100,7 @@ export default {
            box-shadow: -2px 64px 300px 300px rgba(0,0,0,.8);
         }
         @media (max-width: 1050px) {
+            grid-row: 2 / 3;
             width: 90%;
             margin-bottom: 2rem;
         }
