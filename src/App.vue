@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="app grid_main">
+    <CookieMessage/>
     <transition name="fade" mode="out-in">
       <router-view/>
     </transition>
@@ -19,7 +20,11 @@
 
 <script>
   import "@/styles/ionicons.css"
+  import CookieMessage from "@/components/CookieMessage.vue";
   export default {
+    components: {
+      CookieMessage
+    },
     data() {
       return {
         back: false
