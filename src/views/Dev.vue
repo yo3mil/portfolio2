@@ -47,20 +47,20 @@ export default {
         video: "http://www.emilwojcik.com/video/invoicerfinal.mp4",
         // gdrive link: https://drive.google.com/uc?export=download&id=1EXphsFxJqOHZCnQrIp4XPkopPJXLshj4
         live: "http://www.emilwojcik.com/video/invoicerfinal.mp4",
-        git: "https://github.com/yo3mil/"
+        git: "https://github.com/yo3mil/invoicer"
       },
       projectTwo: {
         name: "City Break",
         description: "Little widget which compares the temperatures in capital cities around Europe with the current location of its user. Originally made with in vanilla, recently refactored with Vue.js - both versions of the code are available under the GitHub link.",
         video: "http://www.emilwojcik.com/video/citybreak.mp4",
         live: "https://www.emilwojcik.com/citybreak",
-        git: "https://github.com/yo3mil/CityBreakVue"
+        git: "https://github.com/yo3mil/CityBreak"
       },
       projectThree: {
         name: "Old Portfolio",
         description: "Pretty much the first website I have ever created. Although buggy and far from perfect, it is great to look back and see creative transitions I have managed to pull with next to zero JavaScript involved. ",
         video: "http://www.emilwojcik.com/video/portfolio.mp4",
-        live: "https://www.emilwojcik.com/oldportfolio",
+        live: "",
         git: ""
       },
       projectFour: {
