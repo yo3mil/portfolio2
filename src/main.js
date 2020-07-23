@@ -14,7 +14,7 @@ export function cookieConsent() {
       id: 'UA-173271413-1',
       disabled: false,
       debug: {
-        enabled: true,
+        enabled: false,
         trace: true,
         sendHitTask: true
       }
@@ -24,7 +24,7 @@ export function cookieConsent() {
       id: 'UA-173271413-1',
       disabled: true,
       debug: {
-        enabled: true,
+        enabled: false,
         trace: true,
         sendHitTask: true
       }
