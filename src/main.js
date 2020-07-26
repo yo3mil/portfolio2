@@ -7,7 +7,6 @@ Vue.config.productionTip = false
 
 // analytics
 export function cookieConsent() {
-  console.log('wohoo')
   const getGDPR = localStorage.getItem('GDPR:accepted');
   if (typeof getGDPR !== 'undefined' && getGDPR === 'true') {
     Vue.use(VueAnalytics, {
