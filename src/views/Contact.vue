@@ -7,7 +7,7 @@
           <a href="https://www.facebook.com/emil.wojcik/"><i class="ion-social-facebook"></i></a>
           <a href="https://www.instagram.com/yo3mil/"><i class="ion-social-instagram"></i></a>
         </div>
-        <a href="mailto:info@emilwojcik.com"><h3>info@emilwojcik.com</h3></a>
+        <a class="contact__title-mail" href="mailto:info@emilwojcik.com"><h3>info@emilwojcik.com</h3></a>
       </div>
       <!--MESSENGER-->
       <messenger></messenger>
