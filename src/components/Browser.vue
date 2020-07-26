@@ -4,10 +4,11 @@
         <h3>project Explorer 1.11</h3>
     </div>
     <div class="browser__console">
-        <a :href="video.live" target="_blank" :class="{inactive: video.live === ''}"><i class="ion-social-youtube"></i></a>
-        <a :href="video.git" target="_blank" :class="{inactive: video.git === ''}"><i class="ion-social-github"></i></a>
+        <a title="Live" :href="video.live" target="_blank" :class="{inactive: video.live === ''}"><i class="ion-ios-world-outline"></i></a>
+        <a title="Video" :href="video.video" target="_blank" :class="{inactive: video.video === '' || video.video === true}"><i class="ion-social-youtube"></i></a>
+         <a title="Git" :href="video.git" target="_blank" :class="{inactive: video.git === ''}"><i class="ion-social-github"></i></a>
         <div class="browser__console-input">
-            <i class="ion-ios-world-outline"></i>
+            
             <input type="text" placeholder="http://localhost:8080/" readonly>
         </div>
         
