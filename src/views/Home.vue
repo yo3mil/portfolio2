@@ -68,7 +68,7 @@ export default {
     move(where) {
       this.animation = false;
       setTimeout(() => {
-        this.$router.replace({path: where})
+        this.$router.push({path: where})
       }, 500)
     }
   }
