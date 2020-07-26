@@ -6,7 +6,7 @@
         </div>
         
         <div class="yoyo__description" v-show="animation">
-            <p>
+            <p class="yoyo__description-text">
                I have been sponsored to play it, I have traveled a lot because of it, and I have met most of my best friends thanks to it. Even though nowadays it is more of a side hobby, international yoyo events and competitions are still very important dates in my schedule. Check some of my videos in case you think “up and down” is all you can do with a yoyo.
             </p>
         </div>
@@ -17,7 +17,7 @@
 
         <div class="dev__mobile">
             <div class="dev__mobile-link shadow-all">
-                <i class="ion-social-youtube"></i>
+                
                 <a href="https://www.youtube.com/results?search_query=emil+wojcik+yoyo">Youtube</a>
             </div>
         </div>
