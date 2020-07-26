@@ -17,14 +17,15 @@
 
         <!--PROJECT EXPLORER-->
         <browser :video="current"></browser>
-
         <div class="dev__mobile">
-          <div v-if="current.live != ''" class="dev__mobile-link shadow-all">
-            <i class="ion-social-youtube"></i>
-            <a :href="current.live">Live Preview</a>
+          <div class="dev__mobile-game" v-if="current.video === true">Game is not avalaible on a mobile 🙅‍♀️</div>
+          <div v-if="current.video !== '' && current.video !== true" class="dev__mobile-link shadow-all">
+            <a :href="current.video">Video</a>
           </div>
-          <div v-if="current.git != ''" class="dev__mobile-link shadow-all">
-            <i class="ion-social-github"></i>
+          <div v-if="current.live !== ''" class="dev__mobile-link shadow-all">
+            <a :href="current.live">Live</a>
+          </div>
+          <div v-if="current.git !== ''" class="dev__mobile-link shadow-all">
             <a :href="current.git">GitHub</a>
           </div>
         </div>
@@ -45,13 +46,12 @@ export default {
         name: "Invoicer",
         description: "Invoicing and product/customer management web app I made for Orientalmart.co.uk - UK’s top oriental food supplier. Lightweight, powerful and packed with useful features, it’s currently being used as their main wholesale invoicing tool.",
         video: "https://www.emilwojcik.com/video/invoicerfinal.mp4",
-        // gdrive link: https://drive.google.com/uc?export=download&id=1EXphsFxJqOHZCnQrIp4XPkopPJXLshj4
-        live: "https://www.emilwojcik.com/video/invoicerfinal.mp4",
+        live: "",
         git: "https://github.com/yo3mil/invoicer"
       },
       projectTwo: {
         name: "City Break",
-        description: "Little widget which compares the temperatures in capital cities around Europe with the current location of its user. Originally made with in vanilla, recently refactored with Vue.js - both versions of the code are available under the GitHub link.",
+        description: "Little widget which compares the temperatures in capital cities around Europe with the current location of its user. Originally made in vanilla, later refactored with Vue - both versions of the code are available under the GitHub link.",
         video: "https://www.emilwojcik.com/video/citybreak.mp4",
         live: "https://www.emilwojcik.com/citybreak",
         git: "https://github.com/yo3mil/CityBreak"
