@@ -7,7 +7,7 @@
     justify-content: flex-start;
     flex-direction: column;
     font-size: 4.5vh;
-    margin-top: 10%;
+    margin-top: 1%;
     @media (max-width: 900px) {
        display: flex;
      }
@@ -20,6 +20,8 @@
         align-items: center;
         margin-bottom: 5%;
         & a {
+            text-align: center;
+            width: 100%;
             font-family: $font-main;
             margin-left: 1rem;
             text-decoration: none;
@@ -30,5 +32,10 @@
                 color: $color-gray;
             }
         }
+    }
+    &-game {
+        text-align: center;
+        font-size: 2.5vh;
+        font-family: $font-main;
     }
 }
