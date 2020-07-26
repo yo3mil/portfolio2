@@ -328,11 +328,11 @@ export default {
       &-title {
         font-size: 7vh;
         margin-bottom: 3rem;
-        animation: show 2s forwards;
+        animation: show-come 2s forwards;
       }
       &-endgame {
         font-size: 300%;
-        animation: show 1s forwards;
+        animation: show-come 1s forwards;
         & h3 {
           margin-bottom: 30px;
         }
@@ -428,7 +428,7 @@ export default {
     } 85% { transform: rotate(360deg) scale(1);
     } 100% { transform: rotate(-360deg) scale(0); }
   }
-  @keyframes show {
+  @keyframes show-come {
     0% { opacity: none; transform: scale(.5);
     } 100% { opacity: 1; transform: scale(1); }
   }
