@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import VueAnalytics from 'vue-analytics';
+import VueGtag from "vue-gtag";
 Vue.config.productionTip = false
 
 
@@ -9,25 +9,15 @@ Vue.config.productionTip = false
 export function cookieConsent() {
   const getGDPR = localStorage.getItem('GDPR:accepted');
   if (typeof getGDPR !== 'undefined' && getGDPR === 'true') {
-    Vue.use(VueAnalytics, {
-      id: 'UA-173271413-1',
-      disabled: false,
-      debug: {
-        enabled: false,
-        trace: true,
-        sendHitTask: true
-      }
-    })
+    Vue.use(VueGtag, {
+      config: { id: "UA-173271413-1" },
+      enabled: true
+    }, router);
   } else if (typeof getGDPR !== 'undefined' && getGDPR === 'false') {
-    Vue.use(VueAnalytics, {
-      id: 'UA-173271413-1',
-      disabled: true,
-      debug: {
-        enabled: false,
-        trace: true,
-        sendHitTask: true
-      }
-    })
+    Vue.use(VueGtag, {
+      config: { id: "UA-173271413-1" },
+      enabled: false
+    }, router);
   }
 }
 cookieConsent();
