@@ -1,5 +1,6 @@
 .app {
     height: 100%;
+    z-index: 1;
     &__title {
         animation: show 2s forwards;
         opacity: 0;
@@ -15,7 +16,7 @@
         cursor: pointer;
         margin-bottom: 3%;
         transition: all .5s;
-       
+        z-index: 1;
         @media (max-width: 900px) {
             justify-self: center;
             height: min-content;

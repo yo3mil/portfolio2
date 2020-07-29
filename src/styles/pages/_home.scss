@@ -1,7 +1,7 @@
 .home {
     grid-row: 2;
     grid-column: 2;
-    
+    z-index: 1;
         &__img {
             width: 100%;
             height: 100%;
@@ -144,6 +144,7 @@
         margin-right: 30px;
         width: auto;
         border: 2px solid $color-black;
+        background-color: white;
         @media (max-width: 900px) {
             grid-row: 1 / 9;
             grid-column: 9 / 13;

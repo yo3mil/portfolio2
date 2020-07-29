@@ -1,14 +1,16 @@
 
 
 .browser {
-    animation: resize 2s;
     
+    z-index: 1;
+    @include flex-center;
+    animation: resize 2s;
     grid-row: 1 /4;
     grid-column: 2;
     border: 2px solid $color-black;
-    @include flex-center;
     flex-direction: column;
     padding: .3rem;
+    background-color: $color-white;
     @media (max-width: 900px) {
         display: none;
     }

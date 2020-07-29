@@ -1,4 +1,5 @@
 .television {
+    z-index: 1;
     grid-row: 1 / 4;
     grid-column: 2 ;
     border: 2px solid $color-black ;
