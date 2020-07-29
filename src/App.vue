@@ -14,6 +14,7 @@
       </div>
       </transition>
     </router-link>
+     <Circles/>
   </div>
 </template>
 
@@ -21,9 +22,11 @@
 <script>
   import "@/styles/ionicons.css"
   import CookieMessage from "@/components/CookieMessage.vue";
+  import Circles from "@/components/Circles.vue";
   export default {
     components: {
-      CookieMessage
+      CookieMessage,
+      Circles
     },
     data() {
       return {
@@ -60,6 +63,7 @@
     @media (max-width: 900px) {
         overflow-y: scroll;
     }
+    
   
   }
   * {
