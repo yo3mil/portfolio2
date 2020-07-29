@@ -73,7 +73,7 @@ export default {
       projectFive: {
         name: "Other",
         description: "In the process of learning, I have coded tens of little projects and ideas, half of which will never see daylight. All safely stored somewhere in the depths of my computer, ready to be used as an alternative to google search. ",
-        video: "http://www.emilwojcik.com/video/others.mp4",
+        video: "https://www.emilwojcik.com/video/others.mp4",
         live: "",
         git: "https://github.com/yo3mil/"
       },

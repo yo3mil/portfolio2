@@ -37,11 +37,11 @@
 export default {
   data() {
     return {
-      noise: "http://www.emilwojcik.com/video/noiseHD.mp4",
-      video1: "http://www.emilwojcik.com/video/wat.mp4",
-      video2: "http://www.emilwojcik.com/video/smashing.mp4",
-      video3: "http://www.emilwojcik.com/video/quadro.mp4",
-      video4: "http://www.emilwojcik.com/video/tokyo.mp4",
+      noise: "https://www.emilwojcik.com/video/noiseHD.mp4",
+      video1: "https://www.emilwojcik.com/video/wat.mp4",
+      video2: "https://www.emilwojcik.com/video/smashing.mp4",
+      video3: "https://www.emilwojcik.com/video/quadro.mp4",
+      video4: "https://www.emilwojcik.com/video/tokyo.mp4",
       current: '',
       volume: 0
     }
