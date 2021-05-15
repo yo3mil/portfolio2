@@ -32,6 +32,11 @@ Vue.use(VueRouter)
     path: '/contact',
     name: 'Contact',
     component: () => import('../views/Contact.vue')
+  },
+  {
+    path: '/3d',
+    name: 'Three',
+    component: () => import('../views/Three.vue')
   }
 ]
 

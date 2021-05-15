@@ -22,8 +22,9 @@
           }
         &-social {
             font-size: 6vh;
-            color: $color-black;
+            
             & a {
+                color: $color-black;
                 text-decoration: none;
                 &:active,
                 &:visited {
