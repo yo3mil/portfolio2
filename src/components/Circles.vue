@@ -32,6 +32,16 @@ export default {
         }
         
     },
+    watch:{
+        $route(to, from) {
+            if(to == '/') {
+                console.log(to)
+            } else if (from == '/3d') {
+                console.log(from)
+            }
+            
+        }
+    }, 
     methods: {
         createCircles() {
             this.circleArr = [];

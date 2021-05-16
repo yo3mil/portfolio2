@@ -4,7 +4,7 @@
     <transition name="fade" mode="out-in">
       <router-view/>
     </transition>
-    <router-link tag="div" to="/" class="app__title">
+    <router-link aria-label="Back to Home"  to="/" class="app__title">
       <h1>Emil</h1>
       <h1>WOjcik</h1>
       <transition name="fade">
@@ -70,6 +70,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  .app__title {
+    text-decoration: none;
+    color: $color-black;
   }
   
 </style>

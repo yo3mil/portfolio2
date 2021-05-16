@@ -79,7 +79,7 @@ export default {
       },
       minigame: {
         video: true,
-        description: "Press start to kill some zombies and save our planet from apocalypse. Game made on “on a lap” as a single Vue component. Highest score: 89",
+        description: "Press start to kill some zombies and save our planet from apocalypse. Game made on “on a lap” as a single Vue component. High score: 89",
         git: '',
         live: ''
       },

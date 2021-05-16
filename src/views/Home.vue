@@ -47,6 +47,14 @@
       <h1>Contact me.</h1>
     </div>
 
+    <!-- Three -->
+    <transition name="slide-right-left">
+      <div @click="move('/3d')" v-show="animation" class="home__three">
+       <h1>Little secret...</h1> 
+      </div>
+    </transition>
+    
+
     <div class="home__mobile">
       <h1>Emil</h1>
       <h1>WOjcik</h1>
@@ -74,4 +82,5 @@ export default {
   }
 }
 </script>
+
 
