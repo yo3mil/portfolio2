@@ -48,11 +48,11 @@
     </div>
 
     <!-- Three -->
-    <transition name="slide-right-left">
+    <!-- <transition name="slide-right-left">
       <div @click="move('/3d')" v-show="animation" class="home__three">
        <h1>Little secret...</h1> 
       </div>
-    </transition>
+    </transition> -->
     
 
     <div class="home__mobile">

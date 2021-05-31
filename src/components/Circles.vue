@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <canvas id="circles"></canvas>
+        <!-- <canvas id="circles"></canvas> -->
     </div>
     
 </template>
@@ -19,17 +19,17 @@ export default {
         }
     },
     mounted() {
-        //hooks canvas 
-        canvas = document.querySelector('#circles');
-        canvas.width = this.width;
-        canvas.height = this.height;  
-        // canvas context
-        let ctx = canvas.getContext('2d');
-        this.c = ctx;
-        if(canvas.width > 900) {
-            this.createCircles();
-            this.start();
-        }
+        // //hooks canvas 
+        // canvas = document.querySelector('#circles');
+        // canvas.width = this.width;
+        // canvas.height = this.height;  
+        // // canvas context
+        // let ctx = canvas.getContext('2d');
+        // this.c = ctx;
+        // if(canvas.width > 900) {
+        //     this.createCircles();
+        //     this.start();
+        // }
         
     },
     watch:{

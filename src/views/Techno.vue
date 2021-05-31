@@ -19,8 +19,8 @@
         },
         data() {
             return {
-                galaxy: true,
-                techno: false,
+                galaxy: false,
+                techno: true,
                 test: false
             }
         },
