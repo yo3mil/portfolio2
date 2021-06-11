@@ -50,7 +50,8 @@ export const init = () => {
 
     const generateGalaxy = () => {
 
-        const particleTexture = textureLoader.load(`http://www.emilwojcik.com/img/textures/${parameters.texture}.png`)
+        //const particleTexture = textureLoader.load(`http://www.emilwojcik.com/img/textures/${parameters.texture}.png`)
+        const particleTexture = textureLoader.load(`/img/textures/${parameters.texture}.png`)
         
 
 
