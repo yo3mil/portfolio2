@@ -50,7 +50,7 @@ export const init = () => {
 
     const generateGalaxy = () => {
 
-        //const particleTexture = textureLoader.load(`http://www.emilwojcik.com/img/textures/${parameters.texture}.png`)
+        //const particleTexture = textureLoader.load(`/assets/textures/${parameters.texture}.png`)
         const particleTexture = textureLoader.load(`/img/textures/${parameters.texture}.png`)
         
 
@@ -189,11 +189,12 @@ export const init = () => {
      * Renderer
      */
     const renderer = new THREE.WebGLRenderer({
-        canvas: canvas
+        canvas: canvas,
+        alpha: true
     })
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-
+    renderer.setClearColor( 0x000000, 0 );
     /**
      * Animate
      */

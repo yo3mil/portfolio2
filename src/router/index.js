@@ -37,6 +37,11 @@ Vue.use(VueRouter)
     path: '/3d',
     name: 'Three',
     component: () => import('../views/Three.vue')
+  },
+  {
+    path: '/gradient',
+    name: 'Gradient',
+    component: () => import('../views/extras/Gradients.vue')
   }
 ]
 
