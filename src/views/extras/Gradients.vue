@@ -3,7 +3,10 @@
         <div class="gradients">
             <div class="gradients__one"></div>
             <div class="gradients__two"></div>
-            <div class="gradients__three"></div>
+            <div class="gradients__three">
+                <div class="gradients__three--yellow"></div>
+                <div class="gradients__three--pink"></div>
+            </div>
         </div>
     </div>
 </template>
@@ -49,7 +52,26 @@
           
           height: 1000px;
           width: 1000px;
-          background: radial-gradient(circle, rgba(255,111,150,.2) 0%, transparent 60%);
+
+          &--yellow {
+            position: absolute;
+            opacity:1;
+            top: 0;
+            left: 0;
+            width:100%;
+            height: 100%; 
+            background: radial-gradient(circle, rgba(244,180,96,.25) 0%, transparent 60%);
+
+          }
+          &--pink {
+              opacity:1;
+              position: absolute;
+            top: 0;
+            left: 0;
+            width:100%;
+            height: 100%; 
+            background: radial-gradient(circle, rgba(255,111,150,.25) 0%, transparent 60%);
+          }
         }
     }
 </style>
