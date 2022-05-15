@@ -1,54 +1,59 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-  const routes = [
+const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
+    path: "/about",
+    name: "About",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import('../views/About.vue')
+    component: () => import("../views/About.vue"),
   },
   {
-    path: '/dev',
-    name: 'Dev',
-    component: () => import('../views/Dev.vue')
+    path: "/dev",
+    name: "Dev",
+    component: () => import("../views/Dev.vue"),
   },
   {
-    path: '/yoyo',
-    name: 'Yoyo',
-    component: () => import('../views/Yoyo.vue')
+    path: "/yoyo",
+    name: "Yoyo",
+    component: () => import("../views/Yoyo.vue"),
   },
   {
-    path: '/contact',
-    name: 'Contact',
-    component: () => import('../views/Contact.vue')
+    path: "/contact",
+    name: "Contact",
+    component: () => import("../views/Contact.vue"),
   },
   {
-    path: '/3d',
-    name: 'Three',
-    component: () => import('../views/Three.vue')
+    path: "/3d",
+    name: "Three",
+    component: () => import("../views/Three.vue"),
   },
   {
-    path: '/gradient',
-    name: 'Gradient',
-    component: () => import('../views/extras/Gradients.vue')
-  }
-]
+    path: "/gradient",
+    name: "Gradient",
+    component: () => import("../views/extras/Gradients.vue"),
+  },
+  {
+    path: "/snowfall",
+    name: "Snowfall",
+    component: () => import("../views/extras/Snowfall.vue"),
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

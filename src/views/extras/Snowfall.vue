@@ -1,9 +1,9 @@
 <template>
-  <canvas class="webgl__galaxy"></canvas>
+  <canvas class="snowfall_webgl"></canvas>
 </template>
 
 <script>
-import { init } from "../../js/galaxy";
+import { init } from "../../js/snowfall";
 export default {
   mounted() {
     init();
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style style="scss" scoped>
-.webgl__galaxy {
+.snowfall_webgl {
   position: fixed;
   top: 0;
   left: 0;
