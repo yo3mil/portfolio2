@@ -21,11 +21,14 @@
 <script>
 import "@/styles/ionicons.css";
 import CookieMessage from "@/components/CookieMessage.vue";
-import Circles from "@/components/Circles.vue";
+// import Galaxy from "@/components/three/Galaxy.vue";
+import Circles from "@/components/Circles";
+
 export default {
   components: {
     CookieMessage,
     Circles,
+    // Galaxy,
   },
   data() {
     return {
@@ -33,7 +36,7 @@ export default {
     };
   },
   watch: {
-    $route: function() {
+    $route: function () {
       if (this.$route.path === "/") {
         this.back = false;
       } else {

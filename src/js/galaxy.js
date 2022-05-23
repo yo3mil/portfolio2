@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
 
 export const init = () => {
@@ -22,15 +22,15 @@ export const init = () => {
    * Galaxy
    */
   const parameters = {
-    count: 250000,
-    size: 0.03,
+    count: 10000,
+    size: 0.01,
     radius: 5,
-    branches: 4,
-    spin: 1,
-    randomness: 0.7,
-    randomnessPower: 3,
-    insideColour: "#ff6030",
-    outsideColour: "#1b3984",
+    branches: 5,
+    spin: -2.8,
+    randomness: 3.85,
+    randomnessPower: 1.9,
+    insideColour: "#000000",
+    outsideColour: "#000000",
     texture: 1,
   };
 
@@ -44,11 +44,13 @@ export const init = () => {
   let points = null;
 
   const generateGalaxy = () => {
-    //const particleTexture = textureLoader.load(`/assets/textures/${parameters.texture}.png`)
+    // const particleTexture = textureLoader.load(
+    //   `../assets/textures/particles/${parameters.texture}.png`
+    // );
     const particleTexture = textureLoader.load(
       `/img/textures/${parameters.texture}.png`
     );
-
+    console.log(particleTexture);
     // destroy old galaxy
     if (points !== null) {
       geometry.dispose();
@@ -113,7 +115,7 @@ export const init = () => {
       depthWrite: false,
       blending: THREE.AdditiveBlending,
       vertexColors: true,
-      alphaMap: particleTexture,
+      // alphaMap: particleTexture, // add textures here
       transparent: true,
     });
 
@@ -121,6 +123,8 @@ export const init = () => {
 
     points = new THREE.Points(geometry, material);
     scene.add(points);
+    points.position.set(-3.8, -2.2, 0);
+    points.rotation.x = Math.PI / 1.75;
   };
 
   generateGalaxy();
@@ -210,14 +214,17 @@ export const init = () => {
     0.1,
     100
   );
-  camera.position.x = 3;
-  camera.position.y = 3;
-  camera.position.z = 3;
+  // 3.2530034356640867, y: 4.035533515193006, z: -1.095058826571858
+  camera.position.x = 0;
+  camera.position.y = 0;
+  camera.position.z = 3.9;
   scene.add(camera);
 
-  // Controls
-  const controls = new OrbitControls(camera, canvas);
-  controls.enableDamping = true;
+  const axesHelper = new THREE.AxesHelper(5);
+  scene.add(axesHelper);
+  // // Controls
+  // const controls = new OrbitControls(camera, canvas);
+  // controls.enableDamping = true;
 
   /**
    * Renderer
@@ -237,15 +244,16 @@ export const init = () => {
   const tick = () => {
     const elapsedTime = clock.getElapsedTime();
 
-    points.rotation.y = elapsedTime * 0.01;
+    points.rotation.y = elapsedTime * 0.005;
     // Update controls
-    controls.update();
+    // controls.update();
 
     // Render
     renderer.render(scene, camera);
 
     // Call tick again on the next frame
     window.requestAnimationFrame(tick);
+    // console.log(camera.position);
   };
 
   tick();
